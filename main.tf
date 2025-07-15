@@ -1,11 +1,5 @@
 provider "azurerm" {
-  features = {}
-}
-
-resource "azurerm_resource_group" "rg" {
-  name     = "rg-terraform-poc"
-  location = "West Europe"
-}
+  features = {
 variable "ARM_TENANT_ID" {
   description = "Azure Tenant ID"
   type        = string
@@ -24,4 +18,10 @@ variable "ARM_CLIENT_SECRET" {
 variable "ARM_SUBSCRIPTION_ID" {
   description = "Azure Subscription ID"
   type        = string
+  }
+}
+
+resource "azurerm_resource_group" "rg" {
+  name     = "rg-terraform-poc"
+  location = "West Europe"
 }
