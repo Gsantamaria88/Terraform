@@ -1,5 +1,4 @@
 provider "azurerm" {
-  features = {
 variable "ARM_TENANT_ID" {
   description = "Azure Tenant ID"
   type        = string
